@@ -34,8 +34,10 @@ class App extends Component {
       increase: false,
       id: this.maxID++,
     };
+
     this.setState(({ data }) => {
-      return { data: [...data, newItem] };
+      const newData = [...data, newItem];
+      return { data: newData };
     });
   };
 
